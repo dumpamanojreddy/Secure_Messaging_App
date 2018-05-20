@@ -1,0 +1,24 @@
+<!--
+  Generated template for the Conversations page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+    <ion-navbar color="dark">
+        <ion-title>
+            <ion-icon name="bookmarks"></ion-icon> Conversations</ion-title>
+        <ion-buttons end>
+            <button ion-button icon-only (click)="createConversation()">
+      			<ion-icon name="ios-send"></ion-icon>
+      		</button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+<ion-content padding>
+    <ion-list>
+        <button ion-item *ngFor="let convo of conversations" (click)="openConversation(convo)">
+          {{convo}}
+      </button>
+    </ion-list>
+</ion-content>
